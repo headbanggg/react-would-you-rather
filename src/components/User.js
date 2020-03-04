@@ -34,7 +34,7 @@ class User extends Component {
         <div className="card">
         <CardHeader user={user}></CardHeader> 
         <div className="card-body">
-              <h5 className="card-title" className="center">{user.name}</h5>
+              <h5 className="card-title center">{user.name}</h5>
              
                   <button className="btn btn-primary col-md-12"
                   onClick={() => this.handleLogin(user.id)}>

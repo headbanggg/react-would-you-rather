@@ -18,9 +18,11 @@ class Leaderboard extends Component {
         key={user.id} 
         divClass="col-md-4"
         title={`${user.name}`} 
-        firstText={"Questions: "+`${user.questionsCount}`}
-        secondText={"Answered: "+`${user.answersCount}`}
-        thirdText={"Score: "+`${user.answersCount + user.questionsCount}`}></Card>
+    
+        firstText={`Questions: ${user.questionsCount}`}
+        secondText={`Answered: ${user.answersCount}`}
+        thirdText={`Score: ${user.answersCount + user.questionsCount}`}
+        ></Card>
           <br></br>
     
        </div>
