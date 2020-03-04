@@ -12,20 +12,26 @@ class Question extends Component {
 
     const { id, optionOne, optionTwo, timestamp} = question
     return (
-        <div className='row'>
-         <Card user={user} 
-        time={timestamp}
-        divClass="col-md-12"
-        title={`${user.name}`} 
-        firstText={"Would you rather: "}
-        secondText={"A: "+`${optionOne.text}`} 
-        thirdText={"B: "+`${optionTwo.text}`}></Card>
-        <div className="card-footer text-muted col-md-12">
-        {/*style: https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822?gi=a34cb4f3dd19 */}
-        <Link to={`/question/${id}`}>
-            <button className="btn btn-success widthHundred">View Poll</button>
-        </Link>
-      </div>
+        <div className='row' class="container">
+          <div class="row">
+            <div  >
+                <Card user={user} 
+              time={timestamp}
+              divClass="col-md-12"
+              title={`${user.name}`} 
+              firstText={"Would you rather: "}
+              secondText={"A: "+`${optionOne.text}`} 
+              thirdText={"B: "+`${optionTwo.text}`}></Card>
+            </div>
+          </div>
+ 
+
+
+          <div  className="card-footer text-muted col-md-12">
+          <Link to={`/question/${id}`}>
+              <button className="btn btn-success widthHundred">View Poll</button>
+          </Link>
+        </div>
       </div>
     )
   }

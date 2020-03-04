@@ -13,13 +13,18 @@ class Leaderboard extends Component {
     return (
       <div className="row">
       { list.map((user) => (
-        <Card user={user} 
+       <div>
+           <Card user={user} 
         key={user.id} 
         divClass="col-md-4"
         title={`${user.name}`} 
         firstText={"Questions: "+`${user.questionsCount}`}
         secondText={"Answered: "+`${user.answersCount}`}
         thirdText={"Score: "+`${user.answersCount + user.questionsCount}`}></Card>
+          <br></br>
+    
+       </div>
+      
       ))}
     </div>
     )}
@@ -28,11 +33,11 @@ class Leaderboard extends Component {
 function mapStateToProps ({ authedUser, users }) {
   return {
     authedUser,
-    llist:Object.keys(users).map((userId)=>{
+    list:Object.keys(users).map((userId)=>{
         return{
           id: users[userId].id,
           name: users[userId].name,
-          avatar: users[userId].avatarURL,
+          avatarURL: users[userId].avatarURL,
           questionsCount: users[userId].questions.length,
           answersCount: Object.keys(users[userId].answers).length
         }})
