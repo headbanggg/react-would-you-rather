@@ -1,20 +1,13 @@
   
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router-dom'
+
 import { connect } from 'react-redux'
 
 
 class Page404 extends Component {
     render() {
-  /*     const { 
-        authedUser
-        } = this.props
-  
-        if (authedUser === null) {
-          return <Redirect to='/' />
-        }
-        else{ */
+
           return (
             <div>
                 <div className='text-center error-text'> 404 Error </div>

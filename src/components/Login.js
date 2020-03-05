@@ -4,7 +4,7 @@ import { login } from '../actions/authedUser'
 import User from './User'
 
 class Login extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const { dispatch } = this.props
     dispatch(login(false))
   }
@@ -16,10 +16,10 @@ class Login extends Component {
         <h3 className="center">Please select a user</h3>
 
         <br></br>
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
             {Object.keys(users).map(id => (
-              <div class="col-sm" key={id} >
+              <div className="col-sm" key={id} >
                 <User id={id} location={location} />
               </div>
                 ))}

@@ -13,7 +13,7 @@ import PrivateRoute from './PrivateRoute'
 import Page404 from '../components/Page404'
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(handleInitialData())
   }
   render() {

@@ -4,7 +4,7 @@ import { handleSaveAnswer } from '../actions/questions'
 import { Link } from 'react-router-dom'
 import Result from './Result'
 import CardHeader from './CardHeader'
-import { Redirect } from 'react-router-dom'
+
 class Vote extends Component {
 
   handleChoice = (answer) =>{
@@ -16,14 +16,12 @@ class Vote extends Component {
   render() {
     const { 
       question,
-      authedUser,
+      
       notFound,
       isAnswered,
       users} = this.props
 
-  /*     if (authedUser === null) {
-        return <Redirect to='/login' />
-      } */
+
     //404 not found error
     if (notFound) {
       return (

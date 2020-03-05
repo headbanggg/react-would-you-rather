@@ -20,8 +20,8 @@ class Question extends Component {
               divClass="col-md-12"
               title={`${user.name}`} 
               firstText={"Would you rather: "}
-              secondText={"A: "+`${optionOne.text}`} 
-              thirdText={"B: "+`${optionTwo.text}`}></Card>
+              secondText={`A: ${optionOne.text}`} 
+              thirdText={`B: ${optionTwo.text}`}></Card>
             </div>
           </div>
  
