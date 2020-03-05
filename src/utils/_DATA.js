@@ -233,31 +233,5 @@ export function dateFormat(timestamp) {
   const time = date.toLocaleTimeString('en-US')
   return date.toLocaleDateString() + ' - ' + time
 }
-export function _saveNewUser ({ username, name }) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      Object.keys(users).map(user => {
-        if (user === username) {
-          resolve({
-            error: 'Username Already Taken'
-          })
-        }
-      })
-      users = {
-        ...users,
-        [username]: {
-          id: username,
-          name,
-          avatarURL: '',
-          answers: {},
-          questions: []
-        }
-      }
 
-      resolve({
-        ...users
-      })
-    }, 1000)
-  })
-}
 
