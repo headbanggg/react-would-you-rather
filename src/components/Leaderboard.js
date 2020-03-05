@@ -13,7 +13,7 @@ class Leaderboard extends Component {
     return (
       <div className="row">
       { list.map((user) => (
-       <div>
+       <div key={user.id} >
            <Card user={user} 
         key={user.id} 
         divClass="col-md-4"

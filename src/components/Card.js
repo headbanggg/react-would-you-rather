@@ -5,7 +5,7 @@ class Card extends React.Component {
   render() {
     const { user, divClass, title,firstText,secondText,thirdText, time  } = this.props
     return (
-      <div key={user.id} className={divClass} class="container">
+      <div key={user.id} className={divClass}>
       <div className="card" key={user.id} >
       <CardHeader user={user}  />
       <CardBody 

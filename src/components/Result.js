@@ -15,20 +15,20 @@ class Result extends React.Component {
                     <div className="card-body">
                         <h5 className="card-title">{user.name}</h5>
                         <p className="card-text">Would you Rather:</p>
-                        <p className="card-text">
+                        <div className="card-text">
                             A: {question.optionOne.text}
                             {user.answers[question.id] === 'optionOne' ? 
                             (<h6 className="badge badge-success">Your choice</h6>)
                             : ('') 
                             }
-                        </p>
-                        <p className="card-text">
+                        </div>
+                        <div className="card-text">
                             B: {question.optionTwo.text}
                             {user.answers[question.id] === 'optionTwo' ? 
                             (<h6 className="badge badge-success">Your choice</h6>)
                             : ('') 
                             }
-                        </p>
+                        </div>
                         <div>
                         <br />
                         <p>

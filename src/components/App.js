@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
-import LoadingBar from 'react-redux-loading'
+import LoadingBar from 'react-redux-loading-bar'
 import { handleInitialData } from '../actions/shared'
 import Home from '../components/Home'
 import Login from '../components/Login'

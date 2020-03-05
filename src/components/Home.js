@@ -22,11 +22,10 @@ class Home extends Component {
         activeKey={this.state.key}
         onSelect={key => this.setState({ key })}>
         <Tab eventKey="unanswered" title="Unanswered Polls">
-          <div className="card bg-light" class="container">
-            <div className="card-body" class="row">
+          <div className="card bg-light container">
+            <div className="card-body row" >
             {unanswered.map((id) => (
-              <div class="col-sm">
-                  
+              <div className="col-sm" key={id}>
                       <li key={id} >
                         <Question id={id}/>
                       </li>
@@ -38,10 +37,10 @@ class Home extends Component {
 
           </Tab>
           <Tab eventKey="answered" title="Answered Polls">
-            <div className="card bg-light" class="container">
-                <div className="card-body" class="row">
+            <div className="card bg-light container" >
+                <div className="card-body row" >
                 {answered.map((id) => (
-                  <div class="col-sm">
+                  <div className="col-sm" key={id}>
                     <li key={id}>
                       <Question id={id}/>
                     </li>

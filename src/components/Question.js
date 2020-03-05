@@ -12,8 +12,8 @@ class Question extends Component {
 
     const { id, optionOne, optionTwo, timestamp} = question
     return (
-        <div className='row' class="container">
-          <div class="row">
+        <div className='row' >
+          <div className="row">
             <div  >
                 <Card user={user} 
               time={timestamp}
